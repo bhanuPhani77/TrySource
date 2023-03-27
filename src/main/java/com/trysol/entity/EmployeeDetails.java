@@ -19,7 +19,7 @@ public class EmployeeDetails extends User {
 	private final String email;
 
 	private EmployeeDetails(Builder builder) {
-		super(builder.username, builder.password,builder.roles);
+		super(builder.username, builder.password, builder.roles);
 		this.firstName = builder.firstName;
 		this.lastName = builder.lastName;
 		this.email = builder.email;
@@ -53,6 +53,7 @@ public class EmployeeDetails extends User {
 	public int hashCode() {
 		return Objects.hash(super.hashCode(), firstName, lastName, email);
 	}
+
 	@AllArgsConstructor
 	@NoArgsConstructor
 	public static class Builder {

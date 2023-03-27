@@ -29,7 +29,7 @@ public class EmployeeDetailsService implements UserDetailsService{
             .withLastName("phani")
             .withEmail("bhannu@email.com")
             .withUsername("phani")
-            .withPassword("test123")
+            .withPassword(passwordEncoder.encode("test123"))
             .withAuthorities(Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")))
             .build());
         userRegistry.put("admin", new EmployeeDetails.Builder().withFirstName("varma")
